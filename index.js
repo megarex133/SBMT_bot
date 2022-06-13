@@ -16,7 +16,9 @@ bot.start((ctx) => {
 
 //Help command
 bot.help((ctx) => {
-  ctx.reply("Давай подскажу");
+  ctx.reply(
+    "Вот список команд, которые я выполняю:\n /timetable - Показать расписание занятий"
+  );
 });
 // 'Расписание' text
 // bot.on("message", (ctx) => {
@@ -28,7 +30,7 @@ bot.help((ctx) => {
 bot.command("timetable", (ctx) => {
   ctx.reply("Введи номер учебной группы");
   // let success = false;
-  bot.hears(/[0-9]{3}/, (ctx) => {
+  bot.hears(/[0-9]{3,4}/, (ctx) => {
     ctx.reply("Расписание для твоей группы");
     // return (success = true);
   });
