@@ -30,7 +30,7 @@ bot.help((ctx) => {
 bot.command("timetable", (ctx) => {
   ctx.reply("Введи номер учебной группы");
   // let success = false;
-  bot.hears(/[0-9]{3,4}/, (ctx) => {
+  bot.hears(/^[0-9]{3,4}$/, (ctx) => {
     ctx.reply("Расписание для твоей группы");
     // return (success = true);
   });
